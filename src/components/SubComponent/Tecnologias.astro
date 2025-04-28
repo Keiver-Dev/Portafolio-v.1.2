@@ -1,0 +1,45 @@
+---
+import AstroTecnologi from "./Cards/AstroTecnologi.astro";
+import GithubTecnologi from "./Cards/GithubTecnologi.astro";
+import JsTecnologi from "./Cards/JsTecnologi.astro";
+import ReactTecnologi from "./Cards/ReactTecnologi.astro";
+import TailwindTecnologi from "./Cards/TailwindTecnologi.astro";
+---
+
+<div class="flex h-auto xl:h-[100vh] justify-center items-center">
+  <!-- Lado izquierdo vacío (para espaciado en pantallas grandes) -->
+  <section class="hidden xl:block xl:flex-[25%]"></section>
+
+  <!-- Contenido principal -->
+  <article class="w-full max-w-4xl xl:flex-[50%] px-4 xl:px-0">
+    <section class="flex flex-col bg-zinc-900 p-8 rounded-lg border border-zinc-700">
+      <!-- Título con ícono -->
+      <div class="bg-gradient-to-r from-[#DAFDBA] to-[#9AEBA3] w-full p-4 rounded-md mb-4 flex items-center justify-center">
+        <svg class="w-8 h-8 text-[#012030]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+        </svg>
+      </div>
+
+      <h2 class="text-2xl font-bold mb-2">Frontend Developer</h2>
+
+      <p class="text-zinc-500 mb-6">
+        I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+      </p>
+
+      <p class="text-[#DAFDBA] font-semibold mt-4">Languages I speak:</p>
+      <p class="mb-4 text-zinc-500">HTML, CSS, JavaScript, TypeScript, Java <span class="text-[#DAFDBA]">(In Coming)</span>, Git, Node</p>
+
+      <p class="text-[#DAFDBA] font-semibold mt-4">Dev Tools:</p>
+      <ul class="flex flex-wrap gap-4 mt-4 justify-center items-center">
+        <li><AstroTecnologi /></li>
+        <li><ReactTecnologi /></li>
+        <li><GithubTecnologi /></li>
+        <li><JsTecnologi /></li>
+        <li><TailwindTecnologi /></li>
+      </ul>
+    </section>
+  </article>
+
+  <!-- Lado derecho vacío (para espaciado en pantallas grandes) -->
+  <section class="hidden xl:block xl:flex-[25%]"></section>
+</div>
