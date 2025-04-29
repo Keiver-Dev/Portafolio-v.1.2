@@ -9,7 +9,7 @@ This is my web portfolio built with **[Astro](https://astro.build/)** and **[Tai
 - [Astro](https://astro.build/)
 - HTML / CSS / JavaScript
 - (Optional: React is already installed. You can also integrate Vue, Svelte, etc.)
-- Markdown / MDX (if used)
+- Markdown / MDX (if used)..
 
 ---
 
