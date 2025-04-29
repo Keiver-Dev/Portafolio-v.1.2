@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   output: 'static',
-  base: '/Portafolio-V.1.2/',
+  base: '/Portafolio-v.1.2/',
   integrations: [
     react(),
     tailwind({
