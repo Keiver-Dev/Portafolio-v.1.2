@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Proyect from "./Project";
+import PixelArtGallery from "./PixelArtGallery";
+import SpotifyClone from "./Spotify-Clone";
 
 const slides = [
-  <Proyect key={1} />,
-  // Puedes agregar más slides: <OtroComponente key={2} />, ...
+  <PixelArtGallery key={1} />,
+  <SpotifyClone key={2} />,
 ];
 
 export const Carrucel = () => {
@@ -19,54 +20,47 @@ export const Carrucel = () => {
 
   return (
     <div className="w-screen h-screen relative overflow-hidden">
-      {/* Slide actual */}
-      <div className="w-full h-full transition duration-500 ease-in-out">
-        {slides[currentIndex]}
+      {/* Slides */}
+      <div
+        className="flex transition-transform duration-500 ease-in-out h-full"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div key={index} className="w-screen flex-shrink-0 h-full">
+            {slide}
+          </div>
+        ))}
       </div>
 
       {/* Botones de control */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 text-white p-2"
+        className="absolute top-1/2 left-4 -translate-y-1/2 text-white hover:text-[#DAFDBA] p-2 hidden md:block xl:block"
       >
-        <svg
-          className="w-6 h-6 text-gray-800 dark:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
+        {/* Flecha Izquierda */}
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2"
-            d="m15 19-7-7 7-7"
+            d="M15 19l-7-7 7-7"
           />
         </svg>
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 text-white p-2 rounded-full"
+        className="absolute top-1/2 right-4 -translate-y-1/2 text-white hover:text-[#DAFDBA] p-2 hidden md:block xl:block"
       >
-        <svg
-          className="w-6 h-6 text-gray-800 dark:text-white"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
+        {/* Flecha Derecha */}
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
           <path
             stroke="currentColor"
+            strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="2"
-            d="m9 5 7 7-7 7"
+            d="M9 5l7 7-7 7"
           />
         </svg>
       </button>
@@ -77,8 +71,8 @@ export const Carrucel = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? "bg-white" : "bg-gray-400"
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              index === currentIndex ? "bg-white" : "bg-gray-500"
             }`}
           />
         ))}

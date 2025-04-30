@@ -8,14 +8,12 @@ import Logo from "./Icons/Logo.astro";
     class="flex justify-between items-center text-center shadow-lg transition-transform duration-300 bg-zinc-900/80 backdrop-blur"
   >
     <!-- Logo -->
-    <div class="p-6">
+    <div class="text-white p-6">
       <Logo />
     </div>
 
     <!-- Botón hamburguesa (solo en móviles) -->
-    <button id="menu-toggle" class="sm:hidden p-6 text-2xl focus:outline-none">
-      ☰
-    </button>
+
 
     <!-- Navegación para pantallas sm en adelante -->
     <nav
@@ -23,8 +21,8 @@ import Logo from "./Icons/Logo.astro";
       class="hidden sm:flex items-center gap-10 font-normal p-4"
     >
     <button id="btn-about" class="hover:text-gray-400 transition duration-300">01.About</button>
-    <button id="btn-work" class="hover:text-gray-400 transition duration-300">02.Work</button>
-    <button id="btn-contact" class="hover:text-gray-400 transition duration-300">03.Contact</button>
+    <button id="btn-work" class="hover:text-gray-400 transition duration-300">02.Technologies</button>
+    <button id="btn-contact" class="hover:text-gray-400 transition duration-300">03.Work</button>
       <a
         href="#"
         class="px-4 py-2 text-[#D8FFDB] border transition duration-300 hover:bg-[#9AEBA3] hover:text-black cursor-pointer"
@@ -36,23 +34,32 @@ import Logo from "./Icons/Logo.astro";
 
   <!-- Menú móvil desplegable -->
   <nav
-    id="menu-mobile"
-    class="sm:hidden hidden flex-col gap-4 px-6 py-4 font-normal"
-  >
-    <button class="hover:text-gray-400 transition duration-300">01.About</button>
-    <button class="hover:text-gray-400 transition duration-300">02.Work</button>
-    <button class="hover:text-gray-400 transition duration-300">03.Contact</button>
+  id="menu-mobile"
+  class="sm:hidden hidden flex-col gap-6 px-6 py-6 font-medium bg-zinc-960/90 backdrop-blur-md rounded-b-xl shadow-md animate-fade-in"
+>
+  <div class="flex flex-col gap-4">
+    <button id="btn-about-mobile" class="text-[#D8FFDB] hover:text-[#9AEBA3] transition duration-300 text-lg text-left">
+      About
+    </button>
+    <button id="btn-tech-mobile" class="text-[#D8FFDB] hover:text-[#9AEBA3] transition duration-300 text-lg text-left">
+      Technologies
+    </button>
+    <button id="btn-work-mobile" class="text-[#D8FFDB] hover:text-[#9AEBA3] transition duration-300 text-lg text-left">
+      Work
+    </button>
     <a
-      href="#"
-      class="px-4 py-2 text-[#D8FFDB] border transition duration-300 hover:bg-[#9AEBA3] hover:text-black cursor-pointer w-fit"
-    >
-      Resumen
-    </a>
-  </nav>
+    href="#"
+    class="mt-4 px-4 py-2 border border-[#D8FFDB] text-[#D8FFDB] hover:bg-[#9AEBA3] hover:text-black rounded transition duration-300 w-fit"
+  >
+    Resumen
+  </a>
+  </div>
+</nav>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    
     const navbar = document.getElementById("navbar");
     if (navbar) {
       let lastScroll = window.scrollY;
@@ -70,5 +77,36 @@ import Logo from "./Icons/Logo.astro";
       });
     }
 
+    /* Función Tp NavBar */
+    const btnAbout = document.getElementById("btn-about");
+    const btnTech = document.getElementById("btn-work");
+    const btnWork = document.getElementById("btn-contact");
+
+    const btnAboutMobile = document.getElementById("btn-about-mobile");
+    const btnTechMobile = document.getElementById("btn-tech-mobile");
+    const btnWorkMobile = document.getElementById("btn-work-mobile");
+
+    const scrollToSection = (position: number) => {
+    window.scrollTo({ top: position, behavior: "smooth" });
+    };
+
+
+    btnAbout?.addEventListener("click", () => scrollToSection(900));
+    btnTech?.addEventListener("click", () => scrollToSection(1900));
+    btnWork?.addEventListener("click", () => scrollToSection(2900));
+
+    btnAboutMobile?.addEventListener("click", () => scrollToSection(900));
+    btnTechMobile?.addEventListener("click", () => scrollToSection(1900));
+    btnWorkMobile?.addEventListener("click", () => scrollToSection(2900));
+
+    /* Función Menú Móvil */
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuMobile = document.getElementById("menu-mobile");
+
+    if (menuToggle && menuMobile) {
+      menuToggle.addEventListener("click", () => {
+        menuMobile.classList.toggle("hidden");
+      });
+    }
   });
 </script>

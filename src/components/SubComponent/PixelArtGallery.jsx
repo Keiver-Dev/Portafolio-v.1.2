@@ -1,12 +1,12 @@
-import CarrucelProyects from "./CarrucelProyects.jsx"; // Asegúrate que sea un componente React válido
+import Slade1 from "./Slade-1.jsx";
 
-export default function Project() {
+export default function Project1() {
   return (
     <section className="flex h-screen justify-center items-center bg-zinc-900">
       <section className="flex flex-col items-center justify-center p-4 gap-8 w-[60%] h-[50%]">
         <article className="flex flex-col gap-6 w-full">
           <div className="flex flex-col gap-1">
-            <p className="text-normal md:text-lg text-[#DAFDBA]">Main Projects</p>
+            <p className="text-normal md:text-lg text-[#DAFDBA]">Project - 01</p>
             <h1 className="font-bold text-2xl md:text-2xl xl:text-2xl">PixelArt Gallery</h1>
           </div>
 
@@ -20,7 +20,7 @@ export default function Project() {
           </div>
 
           <div>
-            <CarrucelProyects />
+            <Slade1 />
           </div>
         </article>
       </section>

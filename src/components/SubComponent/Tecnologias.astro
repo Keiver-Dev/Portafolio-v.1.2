@@ -6,40 +6,41 @@ import ReactTecnologi from "./Cards/ReactTecnologi.astro";
 import TailwindTecnologi from "./Cards/TailwindTecnologi.astro";
 ---
 
-<div class="flex h-auto xl:h-[100vh] justify-center items-center">
-  <!-- Lado izquierdo vacío (para espaciado en pantallas grandes) -->
-  <section class="hidden xl:block xl:flex-[25%]"></section>
+<div class="flex min-h-screen justify-center items-center px-4 py-12">
+  <article class="w-full max-w-5xl bg-zinc-900 border border-zinc-700 rounded-2xl shadow-lg p-8 xl:p-12 space-y-8">
 
-  <!-- Contenido principal -->
-  <article class="w-full max-w-4xl xl:flex-[50%] px-4 xl:px-0">
-    <section class="flex flex-col bg-zinc-900 p-8 rounded-lg border border-zinc-700">
-      <!-- Título con ícono -->
-      <div class="bg-gradient-to-r from-[#DAFDBA] to-[#9AEBA3] w-full p-4 rounded-md mb-4 flex items-center justify-center">
+    <!-- Encabezado con ícono -->
+    <div class="flex items-center gap-4 justify-center">
+      <div class="bg-gradient-to-r from-[#DAFDBA] to-[#9AEBA3] p-3 rounded-full shadow-md">
         <svg class="w-8 h-8 text-[#012030]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
         </svg>
       </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-[#DAFDBA]">Frontend Developer</h2>
+    </div>
 
-      <h2 class="text-2xl font-bold mb-2">Frontend Developer</h2>
-
-      <p class="text-zinc-500 mb-6">
+    <!-- Descripción -->
+    <div class="text-center space-y-4">
+      <p class="text-zinc-400 text-lg">
         I like to code things from scratch, and enjoy bringing ideas to life in the browser.
       </p>
 
-      <p class="text-[#DAFDBA] font-semibold mt-4">Languages I speak:</p>
-      <p class="mb-4 text-zinc-500">HTML, CSS, JavaScript, TypeScript, Java <span class="text-[#DAFDBA]">(In Coming)</span>, Git, Node</p>
+      <div>
+        <p class="text-[#9AEBA3] font-semibold">Languages I speak:</p>
+        <p class="text-zinc-400">HTML, CSS, JavaScript, TypeScript, Java <span class="text-[#DAFDBA]">(In Coming)</span>, Git, Node</p>
+      </div>
 
-      <p class="text-[#DAFDBA] font-semibold mt-4">Dev Tools:</p>
-      <ul class="flex flex-wrap gap-4 mt-4 justify-center items-center">
-        <li><AstroTecnologi /></li>
-        <li><ReactTecnologi /></li>
-        <li><GithubTecnologi /></li>
-        <li><JsTecnologi /></li>
-        <li><TailwindTecnologi /></li>
-      </ul>
-    </section>
+      <div>
+        <p class="text-[#9AEBA3] font-semibold">Dev Tools:</p>
+        <ul class="flex flex-wrap justify-center gap-6 mt-4">
+          <li><AstroTecnologi /></li>
+          <li><ReactTecnologi /></li>
+          <li><GithubTecnologi /></li>
+          <li><JsTecnologi /></li>
+          <li><TailwindTecnologi /></li>
+        </ul>
+      </div>
+    </div>
+    
   </article>
-
-  <!-- Lado derecho vacío (para espaciado en pantallas grandes) -->
-  <section class="hidden xl:block xl:flex-[25%]"></section>
 </div>
