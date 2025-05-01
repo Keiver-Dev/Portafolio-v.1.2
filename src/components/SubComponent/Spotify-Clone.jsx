@@ -13,7 +13,7 @@ function Project2() {
           </div>
 
           <div className="bg-zinc-800 p-6 rounded-md shadow-md">
-            <p className="text-zinc-400 md:text-xl xl:text-base">
+            <p className="text-slate-400 md:text-xl xl:text-base">
               It's a remake of <span className="text-[#DAFDBA]">Spotify</span>, with some features and others still in
               progress. It has the visuals and some technical features like page
               turning and music updates in the play bar, and it works with <span className="text-[#DAFDBA]">React

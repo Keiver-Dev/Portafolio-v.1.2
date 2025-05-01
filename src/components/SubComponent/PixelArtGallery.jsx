@@ -11,7 +11,7 @@ export default function Project1() {
           </div>
 
           <div className="bg-zinc-800 p-6 rounded-md shadow-md">
-            <p className="text-zinc-400 md:text-xl xl:text-base">
+            <p className="text-slate-400 md:text-xl xl:text-base">
               Pixel Gallery, a project made with{" "}
               <span className="text-[#DAFDBA]">React 19</span> and
               <span className="text-[#DAFDBA]"> Tailwind</span>, is a pixel art gallery with the ability
