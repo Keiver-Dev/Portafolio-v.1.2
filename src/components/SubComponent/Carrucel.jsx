@@ -1,10 +1,12 @@
 import { useState } from "react";
 import PixelArtGallery from "./PixelArtGallery";
 import SpotifyClone from "./Spotify-Clone";
+import Gallery from './Gallery';
 
 const slides = [
   <PixelArtGallery key={1} />,
   <SpotifyClone key={2} />,
+  <Gallery key={3} />,
 ];
 
 export const Carrucel = () => {
