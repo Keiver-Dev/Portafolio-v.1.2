@@ -1,3 +1,4 @@
+import FrameMotionIcon from "./Icons/ReactIcons/FrameMotionIcon";
 import GitHubIcon from "./Icons/ReactIcons/GitHubIcon";
 import ReactIcon from "./Icons/ReactIcons/ReactIcon";
 import TailwindIcon from "./Icons/ReactIcons/TailwindIcon";
@@ -16,6 +17,10 @@ export default function Slade3() {
         <p>•</p>
         <a href="https://tailwindcss.com/">
           <TailwindIcon />
+        </a>
+        <p>•</p>
+        <a href="https://motion.dev/">
+          <FrameMotionIcon />
         </a>
       </div>
 

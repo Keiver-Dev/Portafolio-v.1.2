@@ -17,8 +17,8 @@ function Project3() {
           <div className="bg-zinc-800 p-6 rounded-md shadow-md">
             <p className="text-slate-400 md:text-xl xl:text-base">
               Gallery is an SVG website with different categories and the
-              ability to copy. See the official SVG page. Made with React,
-              Tailwind, and Frame-Motion.
+              ability to copy. See the official SVG page. Made with <span class="text-[#DAFDBA]">React</span>,
+              <span class="text-[#DAFDBA]">Tailwind</span>, and Frame-Motion.
             </p>
           </div>
           <Slade3 />
